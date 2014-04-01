@@ -21,7 +21,7 @@
     <ClCompile Include="DSP.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="AudioDSPDevice.cpp">
+    <ClCompile Include="RealtimeAudioDevice.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -33,9 +33,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="DSP.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="AudioDSPDevice.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="normalization.h">
@@ -60,6 +57,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="PerChannelDelay.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RealtimeAudioDevice.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

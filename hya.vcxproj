@@ -73,7 +73,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="AudioDSPDevice.cpp" />
+    <ClCompile Include="RealtimeAudioDevice.cpp" />
     <ClCompile Include="DSP.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
@@ -91,7 +91,7 @@
     <ClInclude Include="circular_vector.h" />
     <ClInclude Include="Delay.h" />
     <ClInclude Include="arithmetic.h" />
-    <ClInclude Include="AudioDSPDevice.h" />
+    <ClInclude Include="RealtimeAudioDevice.h" />
     <ClInclude Include="chrono.h" />
     <ClInclude Include="DSP.h" />
     <ClInclude Include="DSPs.h" />

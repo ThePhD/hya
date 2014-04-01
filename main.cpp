@@ -3,7 +3,7 @@
 #include <Furrovine++/Pipeline/WavAudioLoader.h>
 #include <Furrovine++/Stopwatch.h>
 
-#include "AudioDSPDevice.h"
+#include "RealtimeAudioDevice.h"
 #include "DSPs.h"
 
 int main ( ) {
@@ -16,10 +16,10 @@ int main ( ) {
 	const static uint32 bitspersample = 16;
 	const static uint32 channelcount = 2;
 
-	WavAudioData data = WavAudioLoader( )( "synth.wav" );
+	PCMAudioData data = WavAudioLoader( )( "16bit.wav" );
 
 	AudioDevice baseaudiodevice( bitspersample, channelcount, samplerate );
-	AudioDSPDevice audiodevice( baseaudiodevice, milliseconds( 50 ) );
+	RealtimeAudioDevice audiodevice( baseaudiodevice, milliseconds( 10 ) );
 	audiodevice.AddDSP( PerChannelDelay( audiodevice.PCMDescription( ), { seconds( 0.513 ), seconds( 0.490 ) }, real( 0.25 ) ) );
 	
 	AudioBuffer buffer( data.Buffer(), 0, 0, 0, 0, 1 );
@@ -29,7 +29,7 @@ int main ( ) {
 	stopwatch.Start( );
 	while ( true ) {
 		double seconds = stopwatch.ElapsedSeconds( );
-
+		
 		if ( seconds < 1 )
 			continue;
 
